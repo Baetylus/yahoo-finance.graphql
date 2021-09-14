@@ -1,0 +1,8 @@
+{
+  "name": "Yahoo Finance Self Hosted",
+  "description": "Your own instance of a Yahoo Finance graphql server",
+  "repository": "https://github.com/anonrose/yahoo-finance.graphql",
+  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "keywords": ["node", "express", "yahoo-finance", "graphql"],
+  "image": "heroku/nodejs"
+}

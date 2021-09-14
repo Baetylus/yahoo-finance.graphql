@@ -17,8 +17,6 @@ dotenv.config();
 
 const PORT = process.env.PORT || 3000;
 // const key = process.env.YAHOO_FINANCE_HOST, secret = process.env.YAHOO_FINANCE_CLIENT_SECRET;
-const host = 'apidojo-yahoo-finance-v1.p.rapidapi.com',
-  secret = '9556c622a9msh35005ebd3a3eda8p1620fejsnbd17fb5d2622';
 
 
 (async () => {
