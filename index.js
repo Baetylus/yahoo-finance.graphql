@@ -16,7 +16,7 @@ const YahooFinance = require('./src/yahoo-finance');
 dotenv.config();
 
 const PORT = process.env.PORT || 3000;
-// const key = process.env.YAHOO_FINANCE_HOST, secret = process.env.YAHOO_FINANCE_CLIENT_SECRET;
+const host = process.env.YAHOO_FINANCE_HOST, secret = process.env.YAHOO_FINANCE_CLIENT_SECRET;
 
 
 (async () => {
