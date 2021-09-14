@@ -1,6 +1,5 @@
-// const fetch = require('node-fetch')
-import fetch from 'node-fetch'
-export default class YahooFinance {
+const fetch = require('node-fetch')
+module.exports = class YahooFinance {
 
   constructor(host, key, region) {
     this.host = host;
@@ -17,8 +16,6 @@ export default class YahooFinance {
   }
 
   async get(endpoint, params) {
-    console.log(params)
-    console.log('running')
     const response = await fetch(`https://apidojo-yahoo-finance-v1.p.rapidapi.com/stock/v2/get-financials?${params.toString()}`, {
       method: 'GET',
       headers: {
@@ -26,9 +23,6 @@ export default class YahooFinance {
         'x-rapidapi-key': this.key
       }
     });
-
-    const json = await response.json()
-    console.log(json);
-    return json;
+    return await response.json();
   }
 }

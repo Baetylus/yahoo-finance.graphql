@@ -1,14 +1,8 @@
-import YahooFinance from "../../yahoo-finance.js"
-
-
-export default {
+module.exports = {
   Query: {
-    async finances() {
-      return await new YahooFinance(host, secret).financials('AAPL')
+    async finances(_, args, context) {
+      return await context.yahoo.financials(args.symbol)
     }
   },
-  // Mutation: {
-
-  // }
 }
 
