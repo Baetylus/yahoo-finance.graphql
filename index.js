@@ -18,7 +18,6 @@ dotenv.config();
 const PORT = process.env.PORT || 3000;
 const host = process.env.YAHOO_FINANCE_HOST, secret = process.env.YAHOO_FINANCE_CLIENT_SECRET;
 
-
 (async () => {
   const schema = await loadSchema('./src/graphql/types/*.graphql', { // load from multiple files using glob
     loaders: [

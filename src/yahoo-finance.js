@@ -14,9 +14,14 @@ module.exports = class YahooFinance {
 
     return this.get('/stock/v2/get-financials', params);
   }
+  insights(symbol) {
+    const params = new URLSearchParams();
+    params.set('symbol', symbol);
+    return this.get('/stock/v2/get-insights', params);
+  }
 
   async get(endpoint, params) {
-    const response = await fetch(`https://apidojo-yahoo-finance-v1.p.rapidapi.com/stock/v2/get-financials?${params.toString()}`, {
+    const response = await fetch(`https://${this.host}${endpoint}?${params.toString()}`, {
       method: 'GET',
       headers: {
         'x-rapidapi-host': this.host,
