@@ -5,6 +5,9 @@ module.exports = {
     },
     async insights(_, args, context) {
       return await context.yahoo.insights(args.symbol)
+    },
+    async recommendations(_, args, context) {
+      return await context.yahoo.recommendations(args.symbol)
     }
   },
 }

@@ -14,10 +14,17 @@ module.exports = class YahooFinance {
 
     return this.get('/stock/v2/get-financials', params);
   }
+
   insights(symbol) {
     const params = new URLSearchParams();
     params.set('symbol', symbol);
     return this.get('/stock/v2/get-insights', params);
+  }
+
+  recommendations(symbol) {
+    const params = new URLSearchParams();
+    params.set('symbol', symbol);
+    return this.get('/stock/v2/get-recommendations', params);
   }
 
   async get(endpoint, params) {
