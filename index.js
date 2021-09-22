@@ -35,7 +35,7 @@ const host = process.env.YAHOO_FINANCE_HOST, secret = process.env.YAHOO_FINANCE_
 
   app.use('/graphql', graphqlHTTP({
     schema: schemaWithResolvers,
-    graphiql: true
+    graphiql: process.env.SHOW_GRAPHIQL
   }));
 
 
